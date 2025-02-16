@@ -65,6 +65,8 @@ exclude:
   - Gemfile.lock
   - README.md
   - LICENCE
+  - Dockerfile
+  - docker-compose.yml
 
 social_icons:
   - Email

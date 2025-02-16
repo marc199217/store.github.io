@@ -1,5 +1,5 @@
 # Use the official Jekyll image from Docker Hub
-FROM jekyll/jekyll:4.2.1
+FROM jekyll/jekyll:4.2.2
 
 # Set the working directory
 WORKDIR /srv/jekyll
