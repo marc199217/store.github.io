@@ -40,7 +40,7 @@
 }
 
 .content {
-	background: #fff;
+	background: #000;
 	padding: 1px 0 0 0;
 	position: relative;
 }
@@ -55,8 +55,8 @@
 
 	svg {
 		display: inline-block;
-		height: 25px;
-		width: 25px;
+		height: 100px;  // Changed from 25px
+		width: 300px;   // Changed from 25px
 	}
 
 	span {

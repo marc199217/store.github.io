@@ -14,8 +14,11 @@
 
 header {
 	color: #fff;
-	padding: 20px 0 59px 0;
-	background: linear-gradient(135deg, $brand-color 0%, $brand-color-2 100%);
+	padding: 10px 0 10px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #000;
 	position: relative;
 
 	p {

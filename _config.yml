@@ -1,16 +1,17 @@
 # ----
 # Site
 
-title: RIVOLI
-url: "https://marc199217.github.io/store.github.io/"
+title: rīvolō
+url: "https://nordbruch.me/"
 baseurl: 
 google_analytics_key:
 google_maps_javascript_api_key:
+google_tag_manager_id: "GTM-W6P5JFGP"  # Add this line with your GTM ID
 snipcart_key: "NWNjOWZhYjctYmE1ZS00MDM3LThkNjUtZmE5M2NiMTU1NzAwNjM2MjYzNTE1MzM5ODg1ODkw"
-snipcart_currency: "usd"
+snipcart_currency: "eur"
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /siteicon.png
+logo: /brand_logo_white.svg
 description: Fur t-shirt store
 author:
   name: fur
@@ -59,6 +60,7 @@ jekyll-archives:
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-google-tag-manager
 
 exclude:
   - Gemfile
