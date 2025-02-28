@@ -1,9 +1,8 @@
 ---
 name: HuskeeCup & Lid 
+description: HuskeeCup 8oz
 description_markdown: >-
-  Todd the hedgehog may have a spiky exterior but his heart is made of gold.
-  Unfortunately this weighs him down and makes it difficult for him to get
-  around.
+  HuskeeCup
 
 
 

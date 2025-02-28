@@ -3,19 +3,14 @@
 
 <script>
     async function startCheckout(button) {
-        const response = await fetch('/create-checkout-session', {  
+        const response = await fetch('/create-checkout-session', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
                 name: button.getAttribute('data-item-name'),
-                id: button.getAttribute('data-item-id'),
                 image: button.getAttribute('data-item-image'),
-                description: button.getAttribute('data-item-description'),
-                size: button.getAttribute('data-item-custom1-value'),
-                color: button.getAttribute('data-item-custom2-options'),
-                url: button.getAttribute('data-item-url'),
                 price: button.getAttribute('data-item-price')
             })
         });
