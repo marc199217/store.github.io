@@ -9,6 +9,7 @@ google_maps_javascript_api_key:
 google_tag_manager_id: "GTM-W6P5JFGP"  # Add this line with your GTM ID
 snipcart_key: "NWNjOWZhYjctYmE1ZS00MDM3LThkNjUtZmE5M2NiMTU1NzAwNjM2MjYzNTE1MzM5ODg1ODkw"
 snipcart_currency: "eur"
+stripe_publishable_key: "pk_live_51QvFWaLXseLV5m3AuMDvymWsFdM10rU1yE0Okmj5ekbS4CsquxHVDfBOYLS6KnPXv6h28ydcrM6vquTPQvjgFGbH00b8UOefNg"
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /brand_logo_white.svg
