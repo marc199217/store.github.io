@@ -3,7 +3,7 @@
 
 <script>
     async function startCheckout(button) {
-        const response = await fetch('/functions/create-checkout-session', {
+        const response = await fetch('/create-checkout-session', {  
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -19,9 +19,9 @@
                 price: button.getAttribute('data-item-price')
             })
         });
-    
+
         const session = await response.json();
-    
+
         if (session.id) {
             const stripe = Stripe('{{ STRIPE_PUBLISHABLE_KEY }}');
             stripe.redirectToCheckout({ sessionId: session.id });
