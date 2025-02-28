@@ -1,16 +1,18 @@
+import Stripe from 'stripe';
+
 export async function onRequestPost(context) {
-    const stripe = require('stripe')(context.env.STRIPE_SECRET_KEY);
-
-    const { name, id, image, description, size, color, url, price } = await context.request.json();
-
-    const siteUrl = context.env.SITE_URL;
-    const successPath = context.env.STRIPE_SUCCESS_PATH;
-    const cancelPath = context.env.STRIPE_CANCEL_PATH;
-
-    const successUrl = `${siteUrl}${successPath}`;
-    const cancelUrl = `${siteUrl}${cancelPath}`;
+    const stripe = new Stripe(context.env.STRIPE_SECRET_KEY);
 
     try {
+        const { name, id, image, description, size, color, url, price } = await context.request.json();
+
+        const siteUrl = context.env.SITE_URL;
+        const successPath = context.env.STRIPE_SUCCESS_PATH;
+        const cancelPath = context.env.STRIPE_CANCEL_PATH;
+
+        const successUrl = `${siteUrl}${successPath}`;
+        const cancelUrl = `${siteUrl}${cancelPath}`;
+
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
             line_items: [
@@ -18,16 +20,16 @@ export async function onRequestPost(context) {
                     price_data: {
                         currency: 'usd',
                         product_data: {
-                            name: name,
+                            name,
                             images: [image],
-                            description: description,
+                            description,
                             metadata: {
-                                size: size,
-                                color: color,
-                                url: url
-                            }
+                                size,
+                                color,
+                                url,
+                            },
                         },
-                        unit_amount: price * 100, // Amount in cents
+                        unit_amount: price * 100, // Convert dollars to cents
                     },
                     quantity: 1,
                 },
