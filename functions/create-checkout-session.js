@@ -17,10 +17,12 @@ export async function onRequestPost(context) {
             imageUrl = data.image || "https://rivolo-studios.com/brand_logo_black.png";
         }
 
+        console.log("Final Image URL Sent to Stripe:", imageUrl); // Debugging
+
         // Prepare Stripe API request
         const bodyParams = new URLSearchParams({
-            "payment_method_types[]": "card",k
-            "line_items[0][price_data][currency]": "usd",
+            "payment_method_types[]": "card",
+            "line_items[0][price_data][currency]": "eur",
             "line_items[0][price_data][product_data][name]": data.name,
             "line_items[0][price_data][product_data][images][]": imageUrl,
             "line_items[0][price_data][unit_amount]": (data.price * 100).toString(),
