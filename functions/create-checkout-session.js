@@ -3,16 +3,21 @@ export async function onRequestPost(context) {
         const data = await context.request.json();
 
         // Validate required fields
-        if (!data.name || !data.image || !data.price) {
-            throw new Error("Missing required fields: name, image, or price.");
+        if (!data.name || !data.price) {
+            throw new Error("Missing required fields: name or price.");
         }
+
+        // Ensure image is an absolute URL
+        let imageUrl = data.image && data.image.trim() !== "" 
+            ? new URL(data.image, context.env.SITE_URL).href  // ✅ Convert to absolute URL
+            : "https://rivolo-studios.com/brand_logo_black.png";  // Fallback if missing
 
         // Prepare Stripe API request
         const bodyParams = new URLSearchParams({
             "payment_method_types[]": "card",
-            "line_items[0][price_data][currency]": "eur",
+            "line_items[0][price_data][currency]": "usd",
             "line_items[0][price_data][product_data][name]": data.name,
-            "line_items[0][price_data][product_data][images][]": data.image,
+            "line_items[0][price_data][product_data][images][]": imageUrl,
             "line_items[0][price_data][unit_amount]": (data.price * 100).toString(),
             "line_items[0][quantity]": "1",
             "mode": "payment",
