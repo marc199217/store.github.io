@@ -7,14 +7,19 @@ export async function onRequestPost(context) {
             throw new Error("Missing required fields: name or price.");
         }
 
-        // Ensure image is an absolute URL
-        let imageUrl = data.image && data.image.trim() !== "" 
-            ? new URL(data.image, context.env.SITE_URL).href  // ✅ Convert to absolute URL
-            : "https://rivolo-studios.com/brand_logo_black.png";  // Fallback if missing
+        // Convert image path to absolute URL
+        let imageUrl;
+        if (data.image && !data.image.startsWith('http')) {
+            // Prepend SITE_URL if image is relative
+            imageUrl = new URL(data.image, context.env.SITE_URL).href;
+        } else {
+            // Use the provided URL or fallback image
+            imageUrl = data.image || "https://rivolo-studios.com/brand_logo_black.png";
+        }
 
         // Prepare Stripe API request
         const bodyParams = new URLSearchParams({
-            "payment_method_types[]": "card",
+            "payment_method_types[]": "card",k
             "line_items[0][price_data][currency]": "usd",
             "line_items[0][price_data][product_data][name]": data.name,
             "line_items[0][price_data][product_data][images][]": imageUrl,
