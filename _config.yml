@@ -3,13 +3,14 @@
 
 title: rīvolō
 url: "https://rivolo-studios.com/"
+baseurl: ""
 stripe:
   success_path: "/success"
   cancel_path: "/cancel"
 google_analytics_key:
 google_maps_javascript_api_key:
-google_tag_manager_id: "GTM-W6P5JFGP"  # Add this line with your GTM ID
-snipcart_key: "NWNjOWZhYjctYmE1ZS00MDM3LThkNjUtZmE5M2NiMTU1NzAwNjM2MjYzNTE1MzM5ODg1ODkw"
+google_tag_manager_id: "GTM-W6P5JFGP"
+snipcart_key: 
 snipcart_currency: "eur"
 
 
@@ -28,7 +29,7 @@ social:
 
 # -----
 # Build
-timezone: Etc/UTC
+timezone: ETC/UTC
 
 collections:
   staff_members:
