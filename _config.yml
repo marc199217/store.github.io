@@ -13,6 +13,7 @@ google_tag_manager_id: "GTM-W6P5JFGP"
 snipcart_key: 
 snipcart_currency: "eur"
 stripe_publishable_key: "pk_live_51QvFWaLXseLV5m3AuMDvymWsFdM10rU1yE0Okmj5ekbS4CsquxHVDfBOYLS6KnPXv6h28ydcrM6vquTPQvjgFGbH00b8UOefNg" # Add this line
+stripe_publishable_key_test: "pk_test_51QvFWaLXseLV5m3AjppuUGN6Q6py7pG6JXB2L3ZPvvHMlWKX8AKU2vSdMHW2wtNUg0lx08QBh1wYPIAlleZE6702007pzWvkOy"
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /brand_logo_white.svg
@@ -60,6 +61,10 @@ defaults:
 jekyll-archives:
   enabled:
     - categories
+
+sass:
+  sass_dir: _sass
+  style: compressed
 
 plugins:
   - jekyll-sitemap
