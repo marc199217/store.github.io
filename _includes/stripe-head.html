@@ -18,7 +18,7 @@
         const session = await response.json();
 
         if (session.id) {
-            const stripe = Stripe('{{ site.stripe_publishable_key }}');
+            const stripe = Stripe('{{ site.stripe_publishable_key_test }}');
             stripe.redirectToCheckout({ sessionId: session.id });
         } else {
             console.error('Failed to create checkout session:', session.error);
