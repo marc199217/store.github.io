@@ -24,7 +24,7 @@
 		padding: 20px;
 		width: 100%;
 		box-sizing: border-box;
-		@media #{$lg} {
+		@media (min-width: map-get($grid-breakpoints, lg)) {
 			-webkit-flex: 1;
 			flex: 1;
 			order: 2;
@@ -33,7 +33,7 @@
 
 	.contact-details {
 		font-size: .8em;
-		@media #{$lg} {
+		@media (min-width: map-get($grid-breakpoints, lg)) {
 			order: 1;
 		}
 
