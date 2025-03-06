@@ -1,4 +1,4 @@
-@media #{$below-mid-point} {
+@media (max-width: map-get($grid-breakpoints, md)) {
 	.nav-open {
 
 		nav {
@@ -24,7 +24,7 @@ header {
 	p {
 		margin: 0;
 	}
-	@media #{$mid-point} {
+	@media (min-width: map-get($grid-breakpoints, md)) {
 		&:before, &:after {
 			content: "";
 			width: 25%;
@@ -68,7 +68,7 @@ nav {
 	width: 100%;
 	padding: 20px 0 0 0;
 
-	@media #{$mid-point} {
+	@media (min-width: map-get($grid-breakpoints, md)) {
 		display: inline-block;
 		vertical-align: top;
 		width: auto;
@@ -83,7 +83,7 @@ nav {
 		transition: 200ms ease-in color;
 		display: none;
 
-		@media #{$mid-point} {
+		@media (min-width: map-get($grid-breakpoints, md)) {
 			display: inline-block;
 			padding: 10px;
 		}
@@ -99,7 +99,7 @@ nav {
 			z-index: 2;
 			padding: 20px;
 
-			@media #{$mid-point} {
+			@media (min-width: map-get($grid-breakpoints, md)) {
 				display: none;
 			}
 
@@ -134,7 +134,7 @@ nav {
 		}
 	}
 
-	@media #{$mid-point} {
+	@media (min-width: map-get($grid-breakpoints, md)) {
 		a.cart {
 			border-radius: 43px;
 			color: #fff;

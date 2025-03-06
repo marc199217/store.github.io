@@ -3,6 +3,18 @@ $brand-color-2: #000000;
 $default-hero-image: "/images/hero.jpg";
 
 // Breakpoints
-$mobile: "(max-width: 599px)";
-$tablet: "(min-width: 600px) and (max-width: 1199px)";
-$desktop: "(min-width: 1200px)";
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);

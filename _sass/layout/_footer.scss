@@ -15,19 +15,19 @@ footer {
 	}
 
 	.footer-columns {
-		@media #{$mid-point} {
+		@media (min-width: map-get($grid-breakpoints, md)) {
 			display: flex;
 		}
 		@include flex-flow(wrap);
 		list-style: none;
 		padding: 0;
 
-		@media #{$mid-point} {
+		@media (min-width: map-get($grid-breakpoints, md)) {
 			margin: -10px -60px 10px -60px;
 		}
 
 		& > li {
-			@media #{$mid-point} {
+			@media (min-width: map-get($grid-breakpoints, md)) {
 				flex: 1;
 				padding: 0 60px;
 			}
@@ -35,7 +35,7 @@ footer {
 			box-sizing: border-box;
 
 			&.footer-nav {
-				@media #{$mid-point} {
+				@media (min-width: map-get($grid-breakpoints, md)) {
 					flex: 0;
 				}
 			}
