@@ -1,17 +1,13 @@
-# Use the official Jekyll image from Docker Hub
-FROM jekyll/jekyll:4.2.2
-
-# Set the working directory
+FROM ruby:3.2
+RUN apt-get update && apt-get install -y nodejs npm
+RUN gem install "jekyll:4.4.1" "bundler"
 WORKDIR /srv/jekyll
 
-# Copy the current directory contents into the container at /app
-COPY . /srv/jekyll
+# Copy the current directory contents into the container at /srv/jekyll
+COPY . .
 
 # Install any needed packages specified in Gemfile
 RUN bundle install
 
-# Expose port 4000 to the host
-EXPOSE 4000
-
-# Run Jekyll server
-CMD ["jekyll", "serve", "--host", "0.0.0.0"]
+# Run Jekyll build
+CMD ["jekyll", "build"]

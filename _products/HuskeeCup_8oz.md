@@ -14,8 +14,8 @@ stock: 10
 styles:
   - name: Natural
     color: '#d9d1bf'
-    image: /images/products/HuskeeCup_8oz/HuskeeCup_8oz_natural_01.jpg
+    image: /assets/images/products/HuskeeCup_8oz/HuskeeCup_8oz_natural_01.jpg
   - name: Charcoal
     color: '#4a4a5c'
-    image: /images/products/HuskeeCup_8oz/HuskeeCup_8oz_charcoal_01.jpg
+    image: /assets/images/products/HuskeeCup_8oz/HuskeeCup_8oz_charcoal_01.jpg
 ---

@@ -1,12 +1,8 @@
-
 services:
-  app:
-    container_name: jekyll_container
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: jekyll_image
-    ports:
-      - "4000:4000"
+  jekyll:
+    build: .
     volumes:
       - .:/srv/jekyll
+    ports:
+      - "4000:4000"
+    command: jekyll serve --watch --force_polling --host 0.0.0.0

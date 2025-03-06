@@ -80,6 +80,7 @@ exclude:
   - docker-compose.yml
   - .dockerignore
   - .gitignore
+  - _sass
 
 social_icons:
   - Email
