@@ -5,4 +5,4 @@ services:
       - .:/srv/jekyll
     ports:
       - "4000:4000"
-    command: jekyll serve --watch --force_polling --host 0.0.0.0
+    command: jekyll serve --trace --watch --force_polling --host 0.0.0.0

@@ -1,13 +1,19 @@
 FROM ruby:3.2
-RUN apt-get update && apt-get install -y nodejs npm
+
+RUN apt-get update -qq && apt-get install -y nodejs npm build-essential libpq-dev
 RUN gem install "jekyll:4.4.1" "bundler"
+
 WORKDIR /srv/jekyll
 
-# Copy the current directory contents into the container at /srv/jekyll
+COPY Gemfile* ./
+RUN bundle install
+
+COPY package*.json ./
+RUN npm install 
+
 COPY . .
 
-# Install any needed packages specified in Gemfile
-RUN bundle install
+RUN npm run build:sass && echo "SCSS compiled!"
 
 # Run Jekyll build
 CMD ["jekyll", "build"]

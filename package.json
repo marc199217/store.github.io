@@ -1,0 +1,24 @@
+{
+  "name": "store.github.io",
+  "version": "1.0.0",
+  "description": "E-commerce template for Jekyll. Browse through a [live demo](https://turquoise-rook.cloudvent.net).",
+  "main": "index.js",
+  "scripts": {
+    "build:sass": "sass assets/css/main.scss assets/css/main.css --style=compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marc199217/store.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marc199217/store.github.io/issues"
+  },
+  "homepage": "https://github.com/marc199217/store.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "sass": "^1.85.1"
+  }
+}

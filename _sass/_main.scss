@@ -1,4 +1,8 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
 
+// Override Bootstrap variables (optional)
+
+// Import custom styles
 // Abstracts
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
@@ -18,7 +22,6 @@
 @import 'pages/contact';
 
 // Themes
-// @import 'themes/theme';
 
 // Vendors
-// @import 'vendors/bootstrap';
+
