@@ -1,6 +1,16 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
+// Import Google Font first
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
 
 // Override Bootstrap variables (optional)
+$font-family-base: 'Inconsolata', sans-serif;
+$body-bg: #F4F3EE;
+$primary: #000; // Example: Change Bootstrap primary color
+$navbar-light-color: #000; // Ensures navbar links are black
+$footer-bg: #F4F3EE; // Custom footer background
+
+// Import Bootstrap AFTER overrides
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 // Import custom styles
 // Abstracts
