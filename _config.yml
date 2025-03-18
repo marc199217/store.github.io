@@ -16,25 +16,23 @@ stripe_publishable_key: "pk_live_51QvFWaLXseLV5m3AuMDvymWsFdM10rU1yE0Okmj5ekbS4C
 stripe_publishable_key_test: "pk_test_51QvFWaLXseLV5m3AjppuUGN6Q6py7pG6JXB2L3ZPvvHMlWKX8AKU2vSdMHW2wtNUg0lx08QBh1wYPIAlleZE6702007pzWvkOy"
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /brand_logo_white.svg
-description: Fur t-shirt store
+logo: /assets/images/brand_logo_white.svg
+description: E-commerce store for reusable coffee cups from Huskee
 author:
-  name: fur
-  email: fur@example.com
-  twitter: fur # twitter username without the @ symbol
-  phone: "+1 23456789"
+  name: rivolo-studios
+  email: info@rivolo-studios.com
+  pinterest: #fur # twitter username without the @ symbol
+  phone: "+49 172 5892696"
 social:
-  name: Fur Template
+  name: Pinterest 
   links:
-    - https://github.com/CloudCannon/fur-jekyll-template
+    - https://pinterest.com/rivolostudios
 
 # -----
 # Build
 timezone: ETC/UTC
 
 collections:
-  staff_members:
-    output: false
   products:
     output: true
 

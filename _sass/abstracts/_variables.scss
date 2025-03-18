@@ -1,20 +1,9 @@
-$brand-color: #ffffff;
-$brand-color-2: #000000;
-$default-hero-image: "/images/hero.jpg";
+// _variables.scss
+// Description: Global variables for the project
 
-// Breakpoints
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-);
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px
-);
+$font-family-base: 'Inconsolata', sans-serif;
+$body-bg: #F4F3EE;
+$primary: #000; // Example: Change Bootstrap primary color
+$navbar-light-color: #000; // Ensures navbar links are black
+$footer-bg: #F4F3EE; // Custom footer background
+$brand-color: #000; // Custom brand color
