@@ -1,2 +1,58 @@
 // _typography.scss
 // Description: Typography specific styles
+
+@font-face {
+  font-family: 'FuturaBT W04 ExtraBlack';
+  src: url('../fonts/futura-extra-black.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Hero heading styles
+.hero-heading {
+  font-family: 'Jost', sans-serif;
+  font-size: 4.625rem;
+  letter-spacing: -0.04em;
+  line-height: 3.9375rem;
+  margin-bottom: 2.3125rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+
+  @media (min-width: 992px) {
+    font-size: 5.75rem;
+    line-height: 4.875rem;
+    margin-bottom: 2.875rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.75rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+// Body text styles
+.body-text {
+  &--regular {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+  }
+
+  &--large {
+    font-size: 1.125rem;
+    line-height: 1.9375rem;
+    margin-bottom: 1.125rem;
+    font-weight: 400;
+  }
+
+  &--small {
+    font-size: 0.93495rem;
+    line-height: 1.25rem;
+    margin-bottom: 0.875rem;
+    font-weight: 400;
+  }
+}
+

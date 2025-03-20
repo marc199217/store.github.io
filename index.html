@@ -1,37 +1,62 @@
 ---
-title: Waste made beatuiful
-hero: Waste made beatuiful
-subtitle: Waste made beatuiful
+title: Waste made beautiful
+hero: Waste made beautiful
+subtitle: Waste made beautiful
 ---
 
-<div class="hero" style="background-image: url('/assets/images/hero.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center;">
-	<div>
-		<h1>Buy your perfect reusable coffee cup now</h1>
-		<a href="#products" class="btn" style="background-color: #ff6600; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Shop Now</a>
-	</div>
+<div class="hero-section position-relative" style="height: 80vh;">
+    <div class="row g-0 h-100">
+        <!-- Left Hero Image -->
+        <div class="col-md-6">
+            <img src="{{ site.baseurl }}/assets/images/heroes/hero-male.jpg" alt="Male model with Huskeecup" class="img-fluid w-100 h-100 object-fit-cover">
+        </div>
+        <!-- Right Hero Image -->
+        <div class="col-md-6">
+            <img src="{{ site.baseurl }}/assets/images/heroes/hero-female.jpg" alt="Female model with Huskeecup" class="img-fluid w-100 h-100 object-fit-cover">
+        </div>
+    </div>
+    
+    <!-- Overlay Content -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
+        <div class="container text-center flex-grow-1 d-flex flex-column justify-content-center">
+            <h1 class="hero-heading">Huskeecup</h1>
+            <p class="hero-subtitle fs-4 mb-4">Your reusable coffee cup</p>
+        </div>
+        <div class="container text-center pb-5">
+            <a href="{{ site.baseurl }}/products" class="btn btn-small rounded-3 bg-white text-black text-uppercase body-text--small">Jetzt kaufen</a>
+        </div>
+    </div>
 </div>
 
-<div class="content" id="products">
-	<section>
-		<div class="container">
-			<p class="editor-link" style="text-align: center;"><a href="cloudcannon:collections/_products" class="btn"><strong>&#9998;</strong> Manage products</a></p>
-			<ul class="product-list">
-				{% for product in site.products %}
-					<li>
-						{% include product-styles.html product=product %}
-						<div class="product-details">
-							<h4><a href="{{ product.url }}">{{ product.name }}</a></h4>
-							<div class="product-description">
-								{{ product.description_markdown | truncate: 45 | markdownify }}
-							</div>
-							<p>${{ product.price }}</p>
-						</div>
-					</li>
-				{% endfor %}
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-		</div>
-	</section>
+<div class="content py-5" id="products">
+    <section>
+        <div class="container">
+            <p class="text-center mb-4">
+                <a href="cloudcannon:collections/_products" class="btn btn-outline-dark">
+                    <strong>&#9998;</strong> Manage products
+                </a>
+            </p>
+            
+            <div class="row g-4">
+                {% for product in site.products %}
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-0">
+                            <div class="card-body p-0">
+                                <a href="{{ product.url }}" class="text-decoration-none">
+                                    <img src="{{ product.image }}" alt="{{ product.name }}" class="img-fluid w-100">
+                                    <div class="p-4">
+                                        <h4 class="text-dark mb-3">{{ product.name }}</h4>
+                                        <div class="text-muted mb-3">
+                                            {{ product.description_markdown | truncate: 45 | markdownify }}
+                                        </div>
+                                        <p class="text-dark mb-0">${{ product.price }}</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 </div>
