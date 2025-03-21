@@ -1,26 +1,2 @@
 // _footer.scss
 // Description: Footer specific styles
-.footer {
-    background-color: $footer-bg;
-    font-family: $font-family-base;
-    
-    h5 {
-        font-size: 1rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-    }
-    
-    a {
-        font-size: 0.9rem;
-        transition: opacity 0.2s ease-in-out;
-        
-        &:hover {
-            opacity: 0.7;
-        }
-    }
-    
-    hr {
-        border-color: rgba(0, 0, 0, 0.1);
-    }
-}

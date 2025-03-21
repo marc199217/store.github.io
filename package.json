@@ -19,6 +19,6 @@
   "homepage": "https://github.com/marc199217/store.github.io#readme",
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "sass": "^1.85.1"
+    "sass": "^1.86.0"
   }
 }

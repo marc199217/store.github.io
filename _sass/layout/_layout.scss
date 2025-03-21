@@ -2,3 +2,14 @@
 // Description: Layout specific styles
 // Add any custom layout styles here
 
+// Override Bootstrap container padding for large screens
+.container {
+  padding-left: 1rem; // Adjust left padding
+  padding-right: 1rem; // Adjust right padding
+  max-width: 90%; // Adjust max-width to reduce excessive padding
+
+  @media (min-width: 1200px) {
+    max-width: 95%; // Further adjust for extra-large screens
+  }
+}
+
